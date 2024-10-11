@@ -73,7 +73,7 @@ function BlogDashboard() {
                 Submit{" "}
               </button>
             </form>
-            <button onClick={handleGetAll}> Get All BLOG </button>
+            {/* <button onClick={handleGetAll}> Get All BLOG </button> */}
           </div>
           <div  className="blogDisplay">
             <div>
