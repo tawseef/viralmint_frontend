@@ -1,0 +1,42 @@
+.cardContainer{
+    background-color: wheat;
+    padding: 10px;
+    margin: 10px 10px 10px 50px;
+    width:450px;
+    height:auto;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.cardTitle{
+    font-size: larger;
+    font-weight: 700;
+    color: black;
+}
+
+.cardContent{
+    font-weight: 400;
+    color: black;
+}
+
+hr{
+    background-color: black;
+}
+
+.cardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.expandImg{
+    height: 25px;
+    margin-right: 15px;
+}

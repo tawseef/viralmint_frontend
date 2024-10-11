@@ -1,0 +1,26 @@
+.navDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+    color: white;
+    background: rgb(198, 33, 33);
+}
+
+.contentNav{
+    /* padding-top: 5px; */
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: larger;
+}
+
+.searchBar{
+    padding: 5px;
+}
+
+.logoutBtn{
+    margin-right: 50px;
+    width: 100px;
+}
+
+  

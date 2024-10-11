@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+.textBox {
+    padding: 10px;
+    font-size: large;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.submitBtn{
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(255, 136, 0);
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.logIn{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(43, 151, 43);
+}

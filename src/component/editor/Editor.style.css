@@ -1,0 +1,17 @@
+.editCard{
+    max-width: 1200px;
+}
+
+.btn{
+    border: 1px solid black;
+}
+
+.savebtn{
+    border: 1px solid black;
+    width: 100px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+}

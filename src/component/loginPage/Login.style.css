@@ -1,0 +1,101 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px; 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px; 
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold; 
+}
+
+.textBox {
+    padding: 10px;
+    font-size: large;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+.submitLoginBtn{
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(43, 151, 43);
+}
+
+.signUp{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    color: black;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(255, 136, 0);
+}
+
+
+
+
+
+/* For devices with a width of 768px or less (Tablets and below) */
+@media screen and (max-width: 768px) {
+    .wrapper{
+        text-align: center;
+    }
+    
+    .form {
+        width: 300px;
+    }
+
+    .textBox {
+        font-size: medium;
+        height: 45px;
+    }
+
+    .submitBtn {
+        font-size: small;
+        height: 35px;
+    }
+}
+
+/* For devices with a width of 480px or less (Mobile phones) */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        margin-top: 10px; 
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .textBox {
+        font-size: small;
+        height: 40px;
+    }
+
+    .submitBtn {
+        font-size: small;
+        height: 35px;
+    }
+}
