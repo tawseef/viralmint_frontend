@@ -1,3 +1,3 @@
-const API_URL = "https://viralmint-backend.onrender.com/";
+const API_URL = "https://viralmint-backend.onrender.com";
 
 export default API_URL;
