@@ -3,6 +3,7 @@ import "./Signup.style.css";
 import { DataContext } from "../context/context";
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import API_URL from "../api_url";
 
 function Signup() {
   const context = useContext(DataContext)
@@ -25,7 +26,7 @@ function Signup() {
     e.preventDefault();
     if(data.password === data.confirmPass){
       try{
-        const userSignup = await axios.post("http://localhost:8082/v1/user/signup", data, {
+        const userSignup = await axios.post(`${API_URL}/v1/user/signup`, data, {
           headers: {
             'Content-Type': 'application/json',
           },

@@ -6,13 +6,14 @@ import DeleteIcon from "../../assets/Delete.svg";
 import SearchIcon from "../../assets/Search.svg";
 import EditIcon from "../../assets/Edit.svg";
 import { enqueueSnackbar } from "notistack";
+import API_URL from "../api_url";
 
 function Blog_Card(data) {
   const context = useContext(DataContext);
 
   const handleDeleteThisBlog = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:8082/v1/blog/id/${id}`, {
+      const res = await axios.delete(`${API_URL}/v1/blog/id/${id}`, {
         data: {
           email: context.email,
         },

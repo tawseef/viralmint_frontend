@@ -5,6 +5,7 @@ import axios from "axios";
 import Blog_Card from "../blogCard/Blog_Card";
 import EditorBox from "../editor/Editor";
 import { enqueueSnackbar } from "notistack";
+import API_URL from "../api_url";
         
 
 function BlogDashboard() {
@@ -17,7 +18,7 @@ function BlogDashboard() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8082/v1/blog/new", {
+      const res = await axios.post(`${API_URL}/v1/blog/new`, {
         email: data.email,
         content: data.content,
         title: data.title,
@@ -37,7 +38,7 @@ function BlogDashboard() {
 
   const handleGetAll = async () => {
     try {
-      const res = await axios.get("http://localhost:8082/v1/blog/all");
+      const res = await axios.get(`${API_URL}/v1/blog/all`);
       console.log(res.data);
     } catch (error) {
       console.log(error);

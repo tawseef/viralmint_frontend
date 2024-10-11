@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import API_URL from "../api_url";
 
 export const DataContext = createContext(null);
 
@@ -18,7 +19,7 @@ export const DataProvider = (props) => {
   const userBlogFunction = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8082/v1/blog/email/${email}`
+        `${API_URL}/v1/blog/email/${email}`
       );
       if (res.status === 200) setUserBlog(res.data);
     } catch (error) {

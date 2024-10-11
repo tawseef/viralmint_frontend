@@ -3,6 +3,7 @@ import { DataContext } from "../context/context";
 import "./Login.style.css";
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import API_URL from "../api_url";
 
 function Login() {
   const context = useContext(DataContext);
@@ -15,7 +16,7 @@ function Login() {
   const handleLogIn = async (data) => {
     try {
       const userLogin = await axios.post(
-        "http://localhost:8082/v1/user/login",
+        `${API_URL}/v1/user/login`,
         data,
         {
           headers: {

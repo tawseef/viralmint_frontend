@@ -4,6 +4,7 @@ import { DataContext } from "../context/context";
 import "./Editor.style.css";
 import axios from "axios";
 import { enqueueSnackbar } from "notistack";
+import API_URL from "../api_url";
 
 const EditorBox = () => {
   const [text, setText] = useState("");
@@ -25,7 +26,7 @@ const EditorBox = () => {
   
   const handleUpdateBlog = async (id) => {
     try {
-      const res = await axios.put(`http://localhost:8082/v1/blog/id/${id}`, {
+      const res = await axios.put(`${API_URL}/v1/blog/id/${id}`, {
         email: data.email,
         content: text,
       });
