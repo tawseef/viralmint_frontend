@@ -15,21 +15,34 @@ export const DataProvider = (props) => {
   const [oneBlog, setOneBlog] = useState([]);
   const [oneBlogValue, setOneBlogValue] = useState(false);
   const [openEditor, setOpenEditor] = useState(false);
+  const [allBlogs, setAllBlogs] = useState([]);
+  const [onHomePage, setOnHomePage] = useState(true);
 
   const userBlogFunction = async () => {
     try {
-      const res = await axios.get(
-        `${API_URL}/v1/blog/email/${email}`
-      );
+      const res = await axios.get(`${API_URL}/v1/blog/email/${email}`);
       if (res.status === 200) setUserBlog(res.data);
     } catch (error) {
       console.log(error);
     }
   };
 
+  const allBlogFunction = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/v1/blog/all`);
+      console.log(res.data);
+      if (res.status === 200) setAllBlogs(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    const email = localStorage.getItem("email")
-    if(email) setEmail(true)
+    const email = localStorage.getItem("email");
+    if (email) {
+      setEmail(true);
+      setOnHomePage(false);
+    }
     const getLocation = async () => {
       try {
         const response = await axios.get("https://api.ipgeolocation.io/ipgeo", {
@@ -43,13 +56,19 @@ export const DataProvider = (props) => {
         console.log(error);
       }
     };
+    allBlogFunction();
     getLocation();
   }, []);
 
   return (
     <DataContext.Provider
       value={{
-        openEditor, setOpenEditor,
+        onHomePage,
+        setOnHomePage,
+        allBlogs,
+        setAllBlogs,
+        openEditor,
+        setOpenEditor,
         oneBlog,
         setOneBlog,
         oneBlogValue,

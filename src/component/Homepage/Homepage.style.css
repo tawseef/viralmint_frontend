@@ -1,0 +1,35 @@
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.homeButton {
+  width: 400px;
+  height: 50px;
+  background-color: beige;
+  border: 1px solid grey;
+  border-radius: 60px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.homepageTitle {
+  font-size: 35px;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 700px;
+  margin: 20px;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.allTitle {
+  font-size: 23px;
+  margin-top: 30px;
+  text-align: center;
+}
