@@ -26,7 +26,10 @@ function Signup() {
     e.preventDefault();
     if(data.password === data.confirmPass){
       try{
-        const userSignup = await axios.post(`${API_URL}/v1/user/signup`, data, {
+        const userSignup = await axios.post(`${API_URL}/v1/user/signup`, {
+          email: data.email,
+          password: data.password,
+        }, {
           headers: {
             'Content-Type': 'application/json',
           },

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import "./App.css";
 import { DataContext } from "./component/context/context";
 import Login from "./component/loginPage/Login";
@@ -11,6 +11,10 @@ import BlogDashboard from "./component/blogDashboard/BlogDashboard"
 
 function App() {
   const data = useContext(DataContext);
+  useEffect(()=>{
+    const email = localStorage.getItem("email")
+    if(email) data.setEmail(true)
+  },[])
 
   return (
     <div>

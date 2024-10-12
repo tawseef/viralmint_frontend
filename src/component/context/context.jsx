@@ -7,11 +7,11 @@ export const DataContext = createContext(null);
 export const DataProvider = (props) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [email, setEmail] = useState("test@mail.com");
+  const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
   const [userBlog, setUserBlog] = useState([]);
-  const [userSignup, setUserSignup] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [userSignup, setUserSignup] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [oneBlog, setOneBlog] = useState([]);
   const [oneBlogValue, setOneBlogValue] = useState(false);
   const [openEditor, setOpenEditor] = useState(false);
@@ -28,6 +28,8 @@ export const DataProvider = (props) => {
   };
 
   useEffect(() => {
+    const email = localStorage.getItem("email")
+    if(email) setEmail(true)
     const getLocation = async () => {
       try {
         const response = await axios.get("https://api.ipgeolocation.io/ipgeo", {
